@@ -50,13 +50,14 @@ module.exports = class LeanpubScraper extends EventEmitter {
 		this.baseUrl = 'https://leanpub.com';
 		this.bookstoreBase = '/bookstore/earnings_in_last_7_days/';
 		
+		this.selectedCategory = 'all';
 		this.categories = [
+			{ value: 'all', name: 'All' },
 			{ value: 'agile', name: 'Agile' },
 			{ value: 'data_science', name: 'Data Science' },
 			{ value: 'computer_programming', name: 'Computer Programming' },
 			{ value: 'fiction', name: 'Fiction' },
-			{ value: 'non-fiction', name: 'Non-Fiction' },
-			{ value: 'all', name: 'All' }
+			{ value: 'non-fiction', name: 'Non-Fiction' }
 		];
 
 		this.currentPage = 1;
@@ -81,6 +82,8 @@ module.exports = class LeanpubScraper extends EventEmitter {
 
 	start(categorySlug) {
 		categorySlug = categorySlug || 'all';
+
+		this.selectedCategory = categorySlug;
 
 		let url = this.baseUrl + this.bookstoreBase + categorySlug +'/all/';
 
