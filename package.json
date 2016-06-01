@@ -1,0 +1,25 @@
+{
+  "name": "leanpub-scraper",
+  "version": "1.0.0",
+  "description": "Scrape the LeanPub website for ebooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leeroybrun/leanpub-scraper.git"
+  },
+  "author": "Leeroy Brun <leeroy.brun@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leeroybrun/leanpub-scraper/issues"
+  },
+  "homepage": "https://github.com/leeroybrun/leanpub-scraper#readme",
+  "dependencies": {
+    "async": "^2.0.0-rc.5",
+    "cheerio": "^0.20.0",
+    "delayed-request": "~1.0.0",
+    "terminal-status": "0.0.4"
+  }
+}
