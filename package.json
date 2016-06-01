@@ -20,6 +20,6 @@
     "async": "^2.0.0-rc.5",
     "cheerio": "^0.20.0",
     "delayed-request": "~1.0.0",
-    "terminal-status": "0.0.4"
+    "node-status": "~0.1.7"
   }
 }
